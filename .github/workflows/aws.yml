@@ -28,6 +28,6 @@ jobs:
         REPOSITORY: mern
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build --t $EGISTRY/$REPOSITORY:$IMAGE_TAG  --file=backend/docker-setup/node/development/Dockerfile .
+        docker build -t $EGISTRY/$REPOSITORY:$IMAGE_TAG  --file=backend/docker-setup/node/development/Dockerfile .
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
